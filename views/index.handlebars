@@ -1,0 +1,32 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-3 mt-3 pt-5">
+        The All Encompassing Ebook for Web Development
+      </h1><p class="lead">learn web development from front end to back end</p>
+      <form action="/charge" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{stripePublishableKey}}"
+          data-amount="325000"
+          data-name="The best resource for Web Development"
+          data-description="Ebook written by Vigu"
+          data-image="/img/logo.png"
+          data-locale="auto">
+        </script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-dark text-white btn-lg">Purchase For 3250 rupees.</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="row"> 
+        <img class="col-md-6" src="/img/vigu_ebook.png" alt="" class="img-fluid">
+      <img class="col-md-6" src="/img/book.png" alt="" class="img-fluid">
+      </div>
+      
+    </div>
+  </div>
+</section>
